@@ -2,8 +2,7 @@
 
 ## Description
 
-This project is a demonstration of Twilio's API capabilities, specifically focusing on voice API features, texting for conversations, and call recordings. The backend is built with Node.js and Express, serving API endpoints that integrate with Twilio services. The frontend is a React application powered by Vite, providing a user-friendly interface to interact with the Twilio features implemented.
-
+This project is a demonstration of Twilio's API capabilities, specifically focusing on voice API features, texting for conversations, and call recordings. 
 ## Project Structure
 
 ```
@@ -45,7 +44,7 @@ This project is a demonstration of Twilio's API capabilities, specifically focus
 
 ### Installation
 
-1. **Clone the repository (optional):**
+1. **Clone the repository :**
 
 ```bash
 git clone https://github.com/dangphung4/twilio-demo
