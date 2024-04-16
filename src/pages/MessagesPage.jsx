@@ -80,11 +80,11 @@ const MessagesPage = () => {
             <div
               key={message.sid}
               className={`message ${
-                message.author === "+17032233922" ? "twilio" : "personal"
+                message.author === "+yourpersonalnumber" ? "twilio" : "personal"
               }`}
             >
               <p className="message-body">{message.body}</p>
-              <p className="message-body">{message.author === "+17032233922" ? " From Dang" : " From Twilio Support"}</p>
+              <p className="message-body">{message.author === "+yourpersonalnumber" ? " From Dang" : " From Twilio Support"}</p>
               
 
             </div>
