@@ -86,42 +86,19 @@ Ensure you replace the placeholder values with your actual Twilio API details an
 
 ### Running the Application
 
-1. **Start the server:**
+1. **Start both the server and the client:**
 
-From the server directory:
-
-```bash
-npm start
-```
-
-The server will run on [http://localhost:3001](http://localhost:3001).
-
-2. **Start the client:**
-
-From the client (src) directory:
 
 ```bash
 npm run dev
 ```
 
-The client will be available at [http://localhost:3000](http://localhost:3000) and proxies API requests to the server via the configured Vite proxy.
+The server will run on [http://localhost:3001](http://localhost:3001).
+
+The client will be available at [http://localhost:5173](http://localhost:5173) and proxies API requests to the server via the configured Vite proxy.
 
 ## Features
 
 - **Voice API Integration**: Initiate voice calls via Twilio's Voice API.
 - **Messaging and SMS**: Send and receive messages using Twilio's SMS features.
 - **Call Recordings**: Manage and retrieve call recordings.
-
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Ensure to update tests as appropriate.
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
-
----
-
-Feel free to customize this README based on the specifics of your project or any additional details you would like to include.
