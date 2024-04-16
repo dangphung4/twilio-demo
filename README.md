@@ -31,7 +31,9 @@ This project is a demonstration of Twilio's API capabilities, specifically focus
 - **APIs**: Twilio Voice API, SMS and Messaging Services
 - **Other Tools**:
   - `dotenv` for environment variable management
+  - `ngrok` for exposing local servers to the internet
   - Proxy setup in Vite for API integration during development
+
 
 ## Setup Instructions
 
@@ -39,6 +41,7 @@ This project is a demonstration of Twilio's API capabilities, specifically focus
 
 - Node.js and npm (Node package manager)
 - Git (Optional, if cloning the repo)
+- Ngrok account
 
 ### Installation
 
@@ -73,6 +76,12 @@ TWILIO_APPLICATION_SID=your_twilio_application_sid
 ```
 
 Ensure you replace the placeholder values with your actual Twilio API details and phone numbers.
+
+### Twilio Console Configuration
+
+- Log into the [Twilio Console](https://www.twilio.com/console).
+- Navigate to the "Phone Numbers" section and select your number.
+- Set the messaging and voice webhook URLs to your Ngrok URL (e.g., `https://<your-ngrok-url>.ngrok.io/api/messages` for messaging).
 
 ### Running the Application
 
