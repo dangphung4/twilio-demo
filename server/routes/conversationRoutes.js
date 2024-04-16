@@ -42,7 +42,7 @@ router.get("/token", (req, res) => {
     );
   
     const voiceGrant = new twilio.jwt.AccessToken.VoiceGrant({
-      outgoingApplicationSid: "APb9b1f6be19311bfb1b06584de79139f8",
+      outgoingApplicationSid: applicationSid,
       incomingAllow: true,
     });
   

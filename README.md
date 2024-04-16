@@ -49,25 +49,15 @@ git clone https://github.com/dangphung4/twilio-demo
 cd twilio-demo
 ```
 
-2. **Set up the server:**
+2. **Set up the app**
 
-Navigate to the server directory and install dependencies.
+Install dependencies from the root directory.
 
 ```bash
-cd server
 npm install
 ```
 
-3. **Set up the client:**
-
-Navigate to the client directory (from the root of the project) and install dependencies.
-
-```bash
-cd src
-npm install
-```
-
-4. **Environment Variables:**
+3. **Environment Variables:**
 
 Create a `.env` file in the root of the server directory and add the following environment variables:
 
@@ -86,16 +76,21 @@ Ensure you replace the placeholder values with your actual Twilio API details an
 
 ### Running the Application
 
-1. **Start both the server and the client:**
+1. **Start Ngrok:**
+   ```bash
+   ngrok http 3001
+   ```
+   - This command exposes port 3001 to the internet and provides you with a public URL.
 
+2. **Update your Twilio webhook URLs:**
+   - Copy the HTTPS URL provided by Ngrok and update your Twilio phone number’s webhook URLs to use it for incoming calls and messages.
 
-```bash
-npm run dev
-```
-
-The server will run on [http://localhost:3001](http://localhost:3001).
-
-The client will be available at [http://localhost:5173](http://localhost:5173) and proxies API requests to the server via the configured Vite proxy.
+3. **Start both the server and the client:**
+   ```bash
+   npm run dev
+   ```
+   - The server will run on [http://localhost:3001](http://localhost:3001).
+   - The client will be available at [http://localhost:5173](http://localhost:5173) and proxies API requests to the server via the configured Vite proxy.
 
 ## Features
 

@@ -8,6 +8,7 @@ const router = express.Router();
 router.post("/call", (req, res) => {
     const { to } = req.body;
     // Original URL
+    // USE NGROK URL
     const originalUrl = `https://8d85-76-78-172-33.ngrok-free.app/voice`;
     // Encode URL
     const encodedUrl = encodeURI(originalUrl);
@@ -50,7 +51,7 @@ router.post("/call", (req, res) => {
             const clientIdentifier = target.replace('client:', '');
             twiml.dial().client(clientIdentifier);
         } 
-        else if (target == '+18444791229'){
+        else if (target == twilioPhoneNumber){
           console.log("Routing inbound call to desktopClient");
           twiml.dial().client('test');
         }
@@ -102,6 +103,7 @@ router.get('/recordings/:recordingSid', async (req, res) => {
           "Authorization": auth
       }
   }, (twilioRes) => {
+      // Set the content type so the browser can play it directly
       res.setHeader('Content-Type', 'audio/mp3');
       twilioRes.pipe(res); // Stream the recording data from Twilio to the client
   }).on('error', (error) => {
